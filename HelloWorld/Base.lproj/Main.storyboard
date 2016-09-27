@@ -15,14 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-fP-XBQ">
-                                <frame key="frameInset" minX="136" minY="325" width="142" height="86"/>
+                                <frame key="frameInset" minX="116" minY="329" width="142" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Hello World">
+                                <state key="normal" title="See Message">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -31,29 +31,39 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hTX-65-QyF">
-                                <frame key="frameInset" minX="112" minY="458" width="191" height="31"/>
+                                <frame key="frameInset" minX="92" minY="458" width="191" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.10228759915436658" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="kXB-Ji-Qty"/>
+                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="Dig-qv-crD"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oyF-oM-Xv6">
-                                <frame key="frameInset" minX="112" minY="496" width="191" height="31"/>
+                                <frame key="frameInset" minX="92" minY="496" width="191" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1214264607805462" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="dPj-uS-vXA"/>
+                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="Lh0-jZ-NrX"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8UM-P5-fAr">
-                                <frame key="frameInset" minX="112" minY="534" width="191" height="31"/>
+                                <frame key="frameInset" minX="92" minY="534" width="191" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.016062608867891903" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="fD0-NC-IJx"/>
+                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="zEA-zh-v6C"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-fR-6Xr">
+                                <frame key="frameInset" minX="76" minY="258" width="223" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6ZU-kj-amj"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -61,12 +71,13 @@
                         <outlet property="blueSlider" destination="8UM-P5-fAr" id="D3y-7f-2HA"/>
                         <outlet property="greenSlider" destination="oyF-oM-Xv6" id="H9J-cP-a5J"/>
                         <outlet property="helloWorldButton" destination="rPc-fP-XBQ" id="ysp-c6-F6b"/>
+                        <outlet property="newMessage" destination="UPA-fR-6Xr" id="XGn-nz-ibr"/>
                         <outlet property="redSlider" destination="hTX-65-QyF" id="SbG-kK-8ae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.80000000000001" y="428.63568215892059"/>
+            <point key="canvasLocation" x="303.19999999999999" y="427.73613193403304"/>
         </scene>
     </scenes>
 </document>
