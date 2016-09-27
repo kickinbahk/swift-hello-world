@@ -22,10 +22,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func showMessage() {
-        let alertController = UIAlertController(title: "Welcome to my First App", message: "Hello World", preferredStyle: UIAlertControllerStyle.alert)
+    func composeMessage(userMessage: String) {
+        let alertController = UIAlertController(title: "Welcome to my First App", message: "\(userMessage)", preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func showMessage() {
+        composeMessage(userMessage: "Hi Everyone")
     }
 
     @IBOutlet weak var helloWorldButton: UIButton!
