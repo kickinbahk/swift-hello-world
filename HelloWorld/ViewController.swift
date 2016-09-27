@@ -30,9 +30,16 @@ class ViewController: UIViewController {
     }
 
     func composeMessage(userMessage: String) {
-        let alertController = UIAlertController(title: "Welcome to my First App", message: "\(userMessage)", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        present(alertController, animated: true, completion: nil)
+        if (userMessage.characters.count > 0) {
+            let alertController = UIAlertController(title: "Welcome to my First App", message: "\(userMessage)", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "Welcome to my First App", message: "Hello, World", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
+
     }
     
     @IBAction func showMessage() {
