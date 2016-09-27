@@ -64,6 +64,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6ZU-kj-amj"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Message:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibf-VQ-Itb">
+                                <frame key="frameInset" minX="69" minY="164" width="237" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -71,6 +78,7 @@
                         <outlet property="blueSlider" destination="8UM-P5-fAr" id="D3y-7f-2HA"/>
                         <outlet property="greenSlider" destination="oyF-oM-Xv6" id="H9J-cP-a5J"/>
                         <outlet property="helloWorldButton" destination="rPc-fP-XBQ" id="ysp-c6-F6b"/>
+                        <outlet property="inputTitle" destination="Ibf-VQ-Itb" id="Ju3-Vp-hLB"/>
                         <outlet property="newMessage" destination="UPA-fR-6Xr" id="XGn-nz-ibr"/>
                         <outlet property="redSlider" destination="hTX-65-QyF" id="SbG-kK-8ae"/>
                     </connections>
