@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        updateButtonColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +26,20 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: "Welcome to my First App", message: "Hello World", preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         present(alertController, animated: true, completion: nil)
+    }
+
+    @IBOutlet weak var helloWorldButton: UIButton!
+
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
+
+    @IBAction func sliderValueChanged() {
+        updateButtonColor()
+    }
+
+    func updateButtonColor() {
+        helloWorldButton.backgroundColor = UIColor.init(colorLiteralRed: redSlider.value, green: greenSlider.value, blue: blueSlider.value, alpha: 1)
     }
 
 }
